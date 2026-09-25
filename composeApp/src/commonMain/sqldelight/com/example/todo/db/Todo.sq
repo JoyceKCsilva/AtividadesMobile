@@ -1,0 +1,52 @@
+import kotlin.Boolean;
+
+CREATE TABLE category (
+    id TEXT NOT NULL PRIMARY KEY,
+    name TEXT NOT NULL
+);
+
+CREATE TABLE task (
+    id TEXT NOT NULL PRIMARY KEY,
+    title TEXT NOT NULL,
+    description TEXT NOT NULL DEFAULT '',
+    completed INTEGER AS Boolean NOT NULL DEFAULT 0,
+    dueDateTime TEXT,
+    createdAt TEXT NOT NULL,
+    categoryId TEXT REFERENCES category(id) ON DELETE SET NULL
+);
+
+selectAllTasks:
+SELECT task.*, category.name AS categoryName
+FROM task LEFT JOIN category ON task.categoryId = category.id
+ORDER BY completed ASC, dueDateTime ASC, createdAt DESC;
+
+selectTask:
+SELECT task.*, category.name AS categoryName
+FROM task LEFT JOIN category ON task.categoryId = category.id
+WHERE task.id = ?;
+
+insertTask:
+INSERT INTO task(id, title, description, completed, dueDateTime, createdAt, categoryId)
+VALUES (?, ?, ?, ?, ?, ?, ?);
+
+updateTask:
+UPDATE task SET title = ?, description = ?, completed = ?, dueDateTime = ?, categoryId = ?
+WHERE id = ?;
+
+deleteTask:
+DELETE FROM task WHERE id = ?;
+
+selectAllCategories:
+SELECT * FROM category ORDER BY name COLLATE NOCASE;
+
+insertCategory:
+INSERT INTO category(id, name) VALUES (?, ?);
+
+updateCategory:
+UPDATE category SET name = ? WHERE id = ?;
+
+deleteCategory:
+DELETE FROM category WHERE id = ?;
+
+clearCategoryFromTasks:
+UPDATE task SET categoryId = NULL WHERE categoryId = ?;

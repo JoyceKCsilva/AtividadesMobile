@@ -1,0 +1,143 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.todo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="26"
+9        android:targetSdkVersion="35" />
+10
+11    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+11-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:2:5-77
+11-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:2:22-74
+12    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+12-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:3:5-79
+12-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:3:22-76
+13
+14    <permission
+14-->[androidx.core:core:1.15.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\1f64b21c3c133928a943a5ccf77ef826\workspace\transformed\core-1.15.0\AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.todo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.15.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\1f64b21c3c133928a943a5ccf77ef826\workspace\transformed\core-1.15.0\AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.15.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\1f64b21c3c133928a943a5ccf77ef826\workspace\transformed\core-1.15.0\AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.todo.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.15.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\1f64b21c3c133928a943a5ccf77ef826\workspace\transformed\core-1.15.0\AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.15.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\1f64b21c3c133928a943a5ccf77ef826\workspace\transformed\core-1.15.0\AndroidManifest.xml:26:22-94
+19
+20    <application
+20-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:4:5-12:19
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.15.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\1f64b21c3c133928a943a5ccf77ef826\workspace\transformed\core-1.15.0\AndroidManifest.xml:28:18-86
+22        android:debuggable="true"
+23        android:extractNativeLibs="false"
+24        android:label="Tarefas"
+24-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:4:51-74
+25        android:testOnly="true"
+26        android:theme="@style/Theme.App" >
+26-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:4:18-50
+27        <activity
+27-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:5:9-10:20
+28            android:name="com.example.todo.MainActivity"
+28-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:5:19-47
+29            android:exported="true" >
+29-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:5:48-71
+30            <intent-filter>
+30-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:6:13-9:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:7:17-69
+31-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:7:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:8:17-77
+33-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:8:27-74
+34            </intent-filter>
+35        </activity>
+36
+37        <receiver
+37-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:11:9-79
+38            android:name="com.example.todo.ReminderReceiver"
+38-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:11:19-51
+39            android:exported="false" />
+39-->C:\Users\joyce\IdeaProjects\Atividade1-Kotlin\composeApp\src\androidMain\AndroidManifest.xml:11:52-76
+40
+41        <provider
+41-->[org.jetbrains.compose.components:components-resources-android:1.7.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\03a9c4050c451181dd0e04bf96662d51\workspace\transformed\library-release\AndroidManifest.xml:8:9-13:20
+42            android:name="org.jetbrains.compose.resources.AndroidContextProvider"
+42-->[org.jetbrains.compose.components:components-resources-android:1.7.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\03a9c4050c451181dd0e04bf96662d51\workspace\transformed\library-release\AndroidManifest.xml:9:13-82
+43            android:authorities="com.example.todo.resources.AndroidContextProvider"
+43-->[org.jetbrains.compose.components:components-resources-android:1.7.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\03a9c4050c451181dd0e04bf96662d51\workspace\transformed\library-release\AndroidManifest.xml:10:13-84
+44            android:enabled="true"
+44-->[org.jetbrains.compose.components:components-resources-android:1.7.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\03a9c4050c451181dd0e04bf96662d51\workspace\transformed\library-release\AndroidManifest.xml:11:13-35
+45            android:exported="false" >
+45-->[org.jetbrains.compose.components:components-resources-android:1.7.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\03a9c4050c451181dd0e04bf96662d51\workspace\transformed\library-release\AndroidManifest.xml:12:13-37
+46        </provider>
+47        <provider
+47-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:24:9-32:20
+48            android:name="androidx.startup.InitializationProvider"
+48-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:25:13-67
+49            android:authorities="com.example.todo.androidx-startup"
+49-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:26:13-68
+50            android:exported="false" >
+50-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:27:13-37
+51            <meta-data
+51-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:29:13-31:52
+52                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+52-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:30:17-75
+53                android:value="androidx.startup" />
+53-->[androidx.emoji2:emoji2:1.3.0] C:\Users\joyce\.gradle\caches\9.3.0\transforms\43af270925eaee0e650d153de958d6dc\workspace\transformed\emoji2-1.3.0\AndroidManifest.xml:31:17-49
+54            <meta-data
+54-->[androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\joyce\.gradle\caches\9.3.0\transforms\3b801e7cc5c1a6dc12bfd25ac2dc5534\workspace\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:29:13-31:52
+55                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+55-->[androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\joyce\.gradle\caches\9.3.0\transforms\3b801e7cc5c1a6dc12bfd25ac2dc5534\workspace\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:30:17-78
+56                android:value="androidx.startup" />
+56-->[androidx.lifecycle:lifecycle-process:2.8.5] C:\Users\joyce\.gradle\caches\9.3.0\transforms\3b801e7cc5c1a6dc12bfd25ac2dc5534\workspace\transformed\lifecycle-process-2.8.5\AndroidManifest.xml:31:17-49
+57            <meta-data
+57-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:29:13-31:52
+58                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+58-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:30:17-85
+59                android:value="androidx.startup" />
+59-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:31:17-49
+60        </provider>
+61
+62        <receiver
+62-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:34:9-52:20
+63            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+63-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:35:13-76
+64            android:directBootAware="false"
+64-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:36:13-44
+65            android:enabled="true"
+65-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:37:13-35
+66            android:exported="true"
+66-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:38:13-36
+67            android:permission="android.permission.DUMP" >
+67-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:39:13-57
+68            <intent-filter>
+68-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:40:13-42:29
+69                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:17-91
+69-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:41:25-88
+70            </intent-filter>
+71            <intent-filter>
+71-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:43:13-45:29
+72                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+72-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:17-85
+72-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:44:25-82
+73            </intent-filter>
+74            <intent-filter>
+74-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:46:13-48:29
+75                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:17-88
+75-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:47:25-85
+76            </intent-filter>
+77            <intent-filter>
+77-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:49:13-51:29
+78                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:17-95
+78-->[androidx.profileinstaller:profileinstaller:1.3.1] C:\Users\joyce\.gradle\caches\9.3.0\transforms\050b6c90c4dc2668982c0f632db7db8a\workspace\transformed\profileinstaller-1.3.1\AndroidManifest.xml:50:25-92
+79            </intent-filter>
+80        </receiver>
+81    </application>
+82
+83</manifest>
