@@ -28,7 +28,7 @@ Partially completed
 ## 2026-09-24 — Core application implementation
 
 ### Prompt / Request
-Implement the Kotlin Multiplatform mobile to-do application described in `src/instrucoes.md`.
+Implement the Kotlin Multiplatform mobile to-do application described in `instrucoes.md`.
 
 ### Decision Summary
 The application uses a repository over SQLDelight-generated SQLite queries, a `TodoViewModel` backed by `StateFlow`, and a single Compose UI with explicit list, editor, and category-management screens. Existing task IDs are passed through shared state rather than serializing full task objects. Category deletion uses SQLite `ON DELETE SET NULL`, so tasks remain available as uncategorized.
@@ -52,6 +52,29 @@ The original directory did not contain Gradle or a Gradle wrapper, so a local co
 
 ### Fixes Attempted
 Added explicit dependency versions and platform-specific source sets so Android Studio can resolve and build the project.
+
+### Current Status
+Needs testing
+
+## 2026-09-25 — Architecture explanation
+
+### Prompt / Request
+me esplique toda a arquitetura deste projeto. onde está cada coisa, como funciona o banco de dados. onde cada coisa está implementada no codigo (as notificações por exemplo)
+
+### Decision Summary
+Provided a structured explanation of the Kotlin Multiplatform architecture, source sets, Compose UI, ViewModel/repository flow, SQLDelight schema and generated database API, navigation, filtering, and platform notification implementations.
+
+### Actions Performed
+- Documented the architecture and code locations for the user.
+
+### Result
+The project structure and runtime data flows are explained without changing application behavior.
+
+### Problems / Errors
+No new implementation error was reported in this interaction.
+
+### Fixes Attempted
+No source fix was necessary.
 
 ### Current Status
 Needs testing
