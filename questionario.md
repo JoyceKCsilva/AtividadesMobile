@@ -16,17 +16,44 @@ A interface principal fica em composeApp/src/commonMain/kotlin/com/example/todo/
 - UI/screens;
   - As telas são controladas pelo enum privado: private enum class Screen { LIST, EDITOR, CATEGORIES }
 - data models;
+  - Os models estão em composeApp/src/commonMain/kotlin/com/example/todo/Model.kt
+  - Os princiapis modelos são:
+    - Task: representa uma tarefa;
+    - Category: representa uma categoria;
+    - StatusFilter: representa os filtros ALL, PENDING e COMPLETED
 - SQLite/database code;
+  - EStá localoizado em: composeApp/src/commonMain/sqldelight/com/example/todo/db/Todo.sq
+  - É esse arquivo que define as tabelas de task e categorias e também s consultas SQL de criação, leitura, atualização e exclusão.
 - navigation;
+  - A navegação é controlada diretamente em TodoApp(), usando o enum Screen e estados locais do Compose.
 - notification code?
+  - A abstração comum fica em composeApp/src/commonMain/kotlin/com/example/todo/Platform.kt e as implemetações especificas para cada OS em AndroidPlatform.kt, para Android e IosPlatform.kt, para iOS.
 
 Briefly describe how the project is organized.
+
+composeApp/
+├── src/
+│   ├── commonMain/
+│   │   ├── kotlin/
+│   │   │   └── com/example/todo/
+│   │   │       ├── App.kt
+│   │   │       ├── Model.kt
+│   │   │       ├── Platform.kt
+│   │   │       ├── TodoRepository.kt
+│   │   │       └── TodoViewModel.kt
+│   │   └── sqldelight/
+│   │       └── .../Todo.sq
+│   ├── androidMain/
+│   │   └── .../AndroidPlatform.kt
+│   └── iosMain/
+│       └── .../IosPlatform.kt
 
 ---
 
 ## 2. Architecture and State
 
 How is application state managed?
+O projeto utiliza uma abordagem semelhante a MVVM
 
 Explain how the UI is updated after an operation such as:
 
